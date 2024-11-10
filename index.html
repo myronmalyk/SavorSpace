@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Futuristic Restaurant</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#reservations">Reservations</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Welcome to the Futuristic Restaurant</h1>
+      <p>Experience dining like never before, with a touch of tomorrow.</p>
+      <a href="#reservations" class="btn">Make a Reservation</a>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu">
+    <h2>Our Special Menu</h2>
+    <div class="menu-items">
+      <div class="menu-item">
+        <img src="images/foto1.jpg" alt="Dish 1">
+        <h3>Special Dish 1</h3>
+        <p>Experience the fusion of classic and modern flavors.</p>
+      </div>
+      <div class="menu-item">
+        <img src="images/foto2.jpg" alt="Dish 2">
+        <h3>Special Dish 2</h3>
+        <p>A twist on traditional favorites with a futuristic flair.</p>
+      </div>
+      <div class="menu-item">
+        <img src="images/foto3.jpg" alt="Dish 3">
+        <h3>Special Dish 3</h3>
+        <p>Bold flavors that will take your taste buds to the future.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-images">
+      <img src="images/gallery1.jpg" alt="Restaurant 1">
+      <img src="images/gallery2.jpg" alt="Restaurant 2">
+      <img src="images/gallery3.jpg" alt="Restaurant 3">
+    </div>
+  </section>
+
+  <!-- Reservations Section -->
+  <section id="reservations">
+    <h2>Make a Reservation</h2>
+    <form id="reservation-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" required>
+      <button type="submit">Reserve Now</button>
+    </form>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>For more information, reach us at:</p>
+    <p>Email: contact@futuristicrestaurant.com</p>
+    <p>Phone: +123 456 789</p>
+  </section>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

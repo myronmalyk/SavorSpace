@@ -1,0 +1,294 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background: #121212;
+    color: #fff;
+    line-height: 1.6;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Navbar */
+  header {
+    position: fixed;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    top: 0;
+    z-index: 100;
+  }
+  
+  header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  
+  header nav ul li {
+    margin: 0 25px;
+  }
+  
+  header nav ul li a {
+    font-size: 18px;
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+  
+  header nav ul li a:hover {
+    color: #ff6f61;
+  }
+  
+
+
+  /* Hero Section */
+  #home.hero {
+    position: relative;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  /* Dark Overlay to improve text contrast */
+  #home.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semitransparent black overlay */
+    z-index: 1;
+  }
+  
+  /* Hero Content */
+  .hero-content {
+    z-index: 2; /* Ensures the content is on top of the overlay */
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px; /* Space between the elements */
+    padding: 0 20px; /* Add some padding for better spacing */
+  }
+  
+  /* Hero Text */
+  #home.hero h1 {
+    font-size: 3rem;
+    z-index: 2;
+  }
+  
+  #home.hero p {
+    font-size: 1.2rem;
+    z-index: 2;
+  }
+  
+  #home.hero .btn {
+    background-color: #ff6600; /* Example button color */
+    padding: 15px 30px;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    z-index: 2; /* Ensure button is above the overlay */
+  }
+  
+  #home.hero .btn:hover {
+    background-color: #ff4500;
+  }
+  
+  
+  
+  /* Menu Section */
+  #menu {
+    padding: 60px 20px;
+    text-align: center;
+    background: #1f1f1f;
+  }
+  
+  #menu h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .menu-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .menu-item {
+    margin: 15px;
+    background: #222;
+    border-radius: 15px;
+    padding: 25px;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  .menu-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .menu-item img:hover {
+    transform: scale(1.1);
+  }
+  
+  .menu-item h3 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+  }
+  
+  .menu-item p {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  
+  /* Gallery Section */
+  #gallery {
+  padding: 60px 20px;
+  background: #2a2a2a;
+  text-align: center;
+  }
+
+  #gallery h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+
+  .gallery-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .gallery-images img {
+    width: 100%;
+    max-width: 400px;  /* Ajusta el tamaño máximo de la imagen */
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+  }
+
+  .gallery-images img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Reservation Section */
+  #reservations {
+    padding: 60px 20px;
+    background: #1f1f1f;
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  form input, form button {
+    padding: 15px;
+    margin: 10px 0;
+    background: #222;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  form input::placeholder {
+    color: #bbb;
+  }
+  
+  form button {
+    background: #ff6f61;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  form button:hover {
+    background: #e55a47;
+  }
+  
+  /* Contact Section */
+  #contact {
+    padding: 60px 20px;
+    text-align: center;
+    background: #333;
+  }
+  
+  #contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  #contact p {
+    font-size: 1.2rem;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
